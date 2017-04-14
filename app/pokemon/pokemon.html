@@ -1,0 +1,43 @@
+<div class="pokemon">
+	<div class="main-info">
+		<div class="img">
+			<img src="{{ pokedex.pokemon.sprites.front_default }}">
+		</div>
+		<div class="info">
+			<span><b>Peso:</b> {{ pokedex.pokemon.weight }}</span>
+			<span><b>Altura:</b> {{ pokedex.pokemon.height }}</span>
+			<span>
+				<b>Tipo:</b>
+				<span class="label label-primary ability-label" ng-repeat="type in pokedex.pokemon.types">{{ type.type.name }}</span>
+			</span>
+			<span>
+				<b>Habilidades:</b>
+				<span class="label label-success ability-label" ng-repeat="ability in pokedex.pokemon.abilities">{{ ability.ability.name }}</span>
+			</span>
+		</div>
+	</div>
+
+	<div class="stats">
+		<h4>Estadísticas</h4>
+		<table class="table table-condensed table-hover">
+			<tr ng-repeat="stat in pokedex.pokemon.stats">
+				<td class="text-capitalize">{{ stat.stat.name}}</td>
+				<td style="width: 70%;">
+					<div class="progress">
+						<div class="progress-bar progress-bar-info progress-bar-striped" style="width: {{ stat.base_stat }}%">
+	 	 					{{ stat.base_stat }}
+	  					</div>
+	  				</div>
+				</td>
+			</tr>	
+		</table>
+	</div>
+
+	<div class="moves">
+		<h4>Movimientos</h4>
+		<div>
+			<span class="label label-info move" ng-repeat="move in pokedex.pokemon.moves">{{ move.move.name }}</span>
+		</div>
+	</div>
+
+</div>

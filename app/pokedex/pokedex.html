@@ -1,0 +1,43 @@
+<div>
+	<h3 class="text-center">Pokemones</h3>	
+
+	<hr>
+
+	<div class="row">
+		<pokemon-preview ng-repeat="pokemon in pokedex.pokemons"></pokemon-preview>
+	</div>
+
+	<button class="btn btn-default btn-block" ng-click="pokedex.getPokemons()" ng-show="pokedex.url">Ver más pokemones</button>
+
+	<br>
+
+	<div class="modal fade" id="pokemonModal">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+	        		<h4 class="modal-title text-capitalize">{{ pokedex.pokemon.name }}</h4>
+				</div>
+				<div class="modal-body">
+					<div class="loader" ng-hide="pokedex.pokemon"></div>
+			    	<pokemon ng-show="pokedex.pokemon"></pokemon>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+<!-- 	<div class="modal" tabindex="-1" ng-show="pokedex.pokemonVisible">
+	 	<div class="modal-dialog">
+	    	<div class="modal-content">
+	      		<div class="modal-header">
+	        		<button type="button" class="close" ng-click="pokedex.hidePokemon()"><span aria-hidden="true">&times;</span></button>
+	        		<h4 class="modal-title text-capitalize">{{ pokedex.pokemon.name }}</h4>
+	      		</div>
+			    <div class="modal-body">
+	    		</div>
+	    	</div>
+	  	</div>
+	</div>
+
+ --></div>

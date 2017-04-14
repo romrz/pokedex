@@ -1,0 +1,99 @@
+html, body, .container {
+	height: 100%;
+}
+
+.main-page-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+}
+
+.pokemon-preview {
+	cursor: pointer;
+	margin-bottom: 20px;
+	width: 70%;
+	border-radius: 5px;
+}
+
+.pokemon-preview img {
+	display: block;
+	margin: auto;
+	width: 128px;
+}
+
+.pokemon-preview span {
+	display: block;
+	width: 100%;
+	text-align: center;
+	text-transform: capitalize;
+}
+
+.pokemon-preview:hover {
+	color: rgba(0, 128, 200, 1);
+	background-color: rgba(0, 255, 255, 0.1);
+}
+
+.main-info {
+	display: flex;
+}
+
+.main-info .img {
+	display: flex;
+	justify-content: flex-end;
+	flex-grow: 1;
+}
+
+.main-info .img img {
+	width: 128px;
+	height: 128px;
+}
+
+.main-info .info {
+	display: flex;
+	justify-content: center;
+	flex-grow: 1;
+	flex-direction: column;
+}
+
+.progress {
+	margin-bottom: 0;
+}
+
+.table td {
+	border: none !important;
+}
+
+.stats, .moves {
+	margin: auto;
+	width: 70%;
+}
+
+.ability-label {
+	margin-left: 2px;
+}
+
+.moves > div {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.moves .move {
+	margin: 1px;
+}
+
+.loader {
+    border: 16px solid #f3f3f3; /* Light grey */
+    border-top: 16px solid #3498db; /* Blue */
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    margin: 10px auto;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}

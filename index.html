@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html ng-app="PokedexApp">
+<head>
+	<title>Pokedex</title>
+
+	<link rel="stylesheet" type="text/css" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="/styles.css">
+</head>
+<body>
+
+	<div class="container">
+		<ng-view></ng-view>
+	</div>
+
+	<script src="/node_modules/jquery/dist/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
+	<script src="/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+	<script src="app/app.js"></script>
+	<script src="app/pokedex/pokedex.js"></script>
+	<script src="app/pokemon/pokemon.js"></script>
+	<script src="app/pokemon/pokemon-preview.js"></script>
+</body>
+</html>
