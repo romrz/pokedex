@@ -1,7 +1,7 @@
 app.directive('pokedex', function() {
 	return {
 		restrict: 'E',
-		templateUrl: '/app/pokedex/pokedex.html',
+		templateUrl: 'app/pokedex/pokedex.html',
 		controllerAs: 'pokedex',
 		controller: ['$http', function($http) {
 			this.pokemons = [];
@@ -40,9 +40,7 @@ app.directive('pokedex', function() {
 			this.hidePokemon = function() {
 				this.pokemonVisible = false;
 				this.pokemon = null;
-			}
-
-
+			};
 
 		}]
 	};
