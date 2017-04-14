@@ -19,8 +19,8 @@ app.controller('MapController', function(NgMap, $http) {
 				mapCtrl.mapPosition = pos;
 				map.setCenter(pos);
 		        mapCtrl.loadPokemons($http);
-			}, function() {
-				alert("Tu dispositivo no soporta geolocalizacion.")
+			}, function(error) {
+				alert(error)
 			});
         }
 	});
