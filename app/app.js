@@ -4,10 +4,10 @@ var app = angular.module('PokedexApp', ['ngRoute']);
 app.config(function($routeProvider) {
 	$routeProvider
 	.when('/', {
-		templateUrl: '/main.html'
+		templateUrl: 'main.html'
 	})
 	.when('/pokemones', {
-		templateUrl: '/pokemons.html'
+		templateUrl: 'pokemons.html'
 	});
 });
 
