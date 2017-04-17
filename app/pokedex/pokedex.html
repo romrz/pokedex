@@ -7,7 +7,11 @@
 		<pokemon-preview ng-repeat="pokemon in pokedex.pokemons"></pokemon-preview>
 	</div>
 
-	<button class="btn btn-default btn-block" ng-click="pokedex.getPokemons()" ng-show="pokedex.url">Ver más pokemones</button>
+	<div class="loader" ng-show="pokedex.loading"></div>
+
+	<button class="btn btn-default btn-block btn-loader" ng-click="pokedex.getPokemons()" ng-show="pokedex.url">
+		Ver más pokemones
+	</button>
 
 	<br>
 
