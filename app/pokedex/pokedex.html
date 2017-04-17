@@ -3,18 +3,20 @@
 
 	<hr>
 
+	<!-- Grid showing all the pokemons -->
 	<div class="row">
 		<pokemon-preview ng-repeat="pokemon in pokedex.pokemons"></pokemon-preview>
 	</div>
 
 	<div class="loader" ng-show="pokedex.loading"></div>
-
-	<button class="btn btn-default btn-block btn-loader" ng-click="pokedex.getPokemons()" ng-show="pokedex.url">
+	
+	<button class="btn btn-default btn-block btn-loader" ng-click="pokedex.loadPokemons()" ng-show="pokedex.url">
 		Ver más pokemones
 	</button>
 
 	<br>
 
+	<!-- Modal for showing the pokemon details -->
 	<div class="modal fade" id="pokemonModal">
 		<div class="modal-dialog">
 			<div class="modal-content">
@@ -28,6 +30,6 @@
 				</div>
 			</div>
 		</div>
-	</div>
+	</div> <!-- End Modal -->
 
 </div>
